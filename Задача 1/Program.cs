@@ -4,13 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Задача_1
+namespace Практична_2
 {
     //Для будь якого джерела симетричного в послабленому значенні
     class Program
     {
         static void Main(string[] args)
         {
+            //Вибір задачі
+            Console.WriteLine("Введіть номер задачі:");
+            int number = int.Parse(Console.ReadLine());
+            if (number == 1)
+            {
+                goto First;
+            }
+            else if (number == 2)
+            {
+                goto Second;
+            }
+            else
+            {
+                throw new InvalidProgramException("Invalid input.");
+            }
+
+            First:
             //Заповнення матриці
             double[,] matrix = new double[3, 3];
             for (int i = 0; i < 3; i++)
@@ -76,6 +93,9 @@ namespace Задача_1
             Console.WriteLine("Середня кількість інформації, яка передається одним символом: {0}", averageInfosQuantity);
             Console.WriteLine("Швидкість передачі інформації: {0}", broadcastSpeedOfInformation);
             Console.WriteLine("Пропускна здатність каналу: {0}", C);
+
+            Second:
+
         }
     }
 }
