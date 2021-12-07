@@ -95,7 +95,21 @@ namespace Практична_2
             Console.WriteLine("Пропускна здатність каналу: {0}", C);
 
         Second:
+            Console.WriteLine("");
+            double trueIn = double.Parse(Console.ReadLine());
+            Console.WriteLine("");
+            double falseOut = double.Parse(Console.ReadLine());
+            Console.WriteLine("");
+            double eraseSymbol = double.Parse(Console.ReadLine());
+            Console.WriteLine("");
+            double speedOfShare = double.Parse(Console.ReadLine());
 
+            double H1 = -((trueIn + falseOut) * 2 * Math.Log((trueIn + falseOut) / 2, 2) + eraseSymbol * Math.Log(eraseSymbol, 2));
+            double H2 = -(trueIn * Math.Log(trueIn, 2) + falseOut * Math.Log(falseOut, 2) + eraseSymbol * Math.Log(eraseSymbol, 2));
+
+            double C_2 = speedOfShare * (H1 - H2);
+
+            Console.WriteLine($"C: {C_2}");
         }
     }
 }
