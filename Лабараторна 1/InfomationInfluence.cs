@@ -18,15 +18,15 @@ namespace Лабараторна_1
             Random random = new Random();
             double strait = 0;
 
-            if (day % (30 / BossInfluenseTimes) == 0)
+            if (day % 6 == 0)
             {
                 strait += random.NextDouble() * (BossInfluense[1] - BossInfluense[0]) + BossInfluense[0];
             }
-            if (day % (30 / Сoordinator1InfluenseTimes) == 0)
+            if (day % 4 == 0)
             {
                 strait += (random.NextDouble() * (Сoordinator1Influense[1] - Сoordinator1Influense[0]) + Сoordinator1Influense[0]) * 0.9;
             }
-            if (day % (30 / Сoordinator2InfluenseTimes) == 0)
+            if (day % 3 == 0)
             {
                 strait += (random.NextDouble() * (Сoordinator2Influense[1] - Сoordinator2Influense[0]) + Сoordinator2Influense[0]) * 0.8;
             }

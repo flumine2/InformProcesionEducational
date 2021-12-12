@@ -14,7 +14,7 @@ namespace Лабараторна_1
             day = 1;
             allInfluence = 0;
             Employee employee = new Employee();
-            Point currentPoint = new Point(0, 399);
+            Point currentPoint = new Point(10, 390);
 
             do
             {
@@ -32,11 +32,7 @@ namespace Лабараторна_1
 
         private Point GetPoint()
         {
-            Point point = new Point();
-            point.X = 52 * day;
-            point.Y = Convert.ToInt32(399 - 2 * allInfluence * 100.0);
-
-            return point;
+            return new Point(10 + 26 * day, Convert.ToInt32(390 - 4 * allInfluence * 100.0));
         }
     }
 }
