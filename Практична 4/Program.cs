@@ -14,7 +14,7 @@ namespace Практична_4
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Coding by the method of unique codes.");
+            Console.WriteLine("Coding by the method of unique codes Shannon-Fano.");
             countOfSymbols = 1;
             dictionary = new Dictionary<string, double> {{ "A", 0.15 }, { "B", 0.63 }, { "C", 0.05 }, { "D", 0.17 }};
             PrintResultsToConsole();
